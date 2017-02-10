@@ -64,7 +64,6 @@ class DrupalPackages:
                     module_name = i.split()[-3].replace(')', '').replace('(', '')
                     cmd = "drush pmi {} --root={} --uri={}"\
                           .format(module_name.lower(), self.drupal_root_path, self.uri)
-                    print (cmd)
                     mod_info = Popen(cmd, shell=True, stdout=PIPE)
                     module_project = ''
                     module_version = ''
